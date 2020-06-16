@@ -17,6 +17,9 @@ public class ShoppingItem {
     @Column(name = "QUANTITY", nullable = false)
     private Double quantity;
 
+    @ManyToOne
+    private User user;
+
     public ShoppingItem() {
         quantity = 1.0;
     }
@@ -43,5 +46,13 @@ public class ShoppingItem {
 
     public void setQuantity(Double quantity) {
         this.quantity = quantity;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
