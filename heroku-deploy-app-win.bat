@@ -1,0 +1,1 @@
+heroku container:release web --app=shopping-list-demo1
